@@ -40,7 +40,7 @@ cat TeMp.fa | while read line
 	do
 	echo "$line" | awk '{printf (">%d\n%s\n",$1,$2)}' > query.fa
 	CF=`echo "$line" | awk '{printf ("%d\n", \$1)}'` 
-	PANKAJ_GLOBAL -auto -asequence query.fa -bsequence subject.fa -outfile align1 -gapopen 10.0 -gapextend 0.0 -sid1 UNMAPPED -sid2 DATABASE -awidth3 500
+	needle -auto -asequence query.fa -bsequence subject.fa -outfile align1 -gapopen 10.0 -gapextend 0.0 -sid1 UNMAPPED -sid2 DATABASE -awidth3 500
 
 	align_length=`cat align1 | awk '\$1~/UNMAPPED/ && NF==4 {print length(\$3)}'`
 	indelstart=`cat align1 | awk '$1~/UNMAPPED/ && NF==4 {print \$3}' | awk 'BEGIN {FS = "-"} {print (length(\$1))+1}'`
