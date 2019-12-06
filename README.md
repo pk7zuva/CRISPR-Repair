@@ -19,7 +19,9 @@ CRISPR-Repair allows a user to quantitate if the break repaired perfectly (PCR a
 
 # Clone the repository
 
-git https://github.com/pk7zuva/CRISPR-Repair.git
+git clone https://github.com/pk7zuva/CRISPR-Repair.git
+
+cd CRISPR-Repair
 
 # Install the FLASH package
 
