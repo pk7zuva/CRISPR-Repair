@@ -15,8 +15,19 @@ CRISPR-Repair allows a user to quantitate if the break repaired perfectly (PCR a
 5.	Parsing of alignment and identification of deletion and micro homology:  Alignment of each read with expected amplicon sequence is read by custom script. Length of deletion compared to expected sequence, ligation point and 2-15 bases long micro homology at ligation point (if any) is identified. Finally, CRISPR-Repair outputs an alignment of each unique read with the cloning frequency, length of deletion and micro homology information. The complete pipeline is available from at the GitHub repository (https://github.com/pk7zuva/CRISPR-Repair). 
 
 
-# Following programs needs to install before running the pipeline
+# Following are the steps to download and run CRISPR-Repair
 
-https://github.com/dstreett/FLASH2
+Clone the repository: https://github.com/pk7zuva/CRISPR-Repair.git
+
+Install the FLASH package by  "FLASH-1.2.11.tar.gz provided with this pipeline". More information about this package can be found here "https://ccb.jhu.edu/software/FLASH/".
+
+Install the EMBOSS package from "EMBOSS-6.5.7.tar.gz". It can be also downloaded from "https://src.fedoraproject.org/lookaside/extras/EMBOSS/EMBOSS-6.5.7.tar.gz/6a2cb3f93d5e9415c74ab0f6b1ede5f0/".
+
+After installing above program run the script with following argument:
+pX330_A_R1_trimmed.fastq & pX330_A_R2_trimmed.fastq are adaptor trimmed fastq files.
+pX330 = sample name
+subject.onlyseq.fa = contains the expected amplicon sequence
+
+# bash CRISPR-DNA-Repair.sh pX330_A_R1_trimmed.fastq pX330_A_R2_trimmed.fastq pX330 subject.onlyseq.fa 
 
 
