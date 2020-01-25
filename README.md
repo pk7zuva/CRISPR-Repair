@@ -1,6 +1,6 @@
-# CRISPR-Repair: Analysis of double strand break repair outcomes from paired end high throughput sequencing data
+# Microhomology Detector: Analysis of double strand break repair outcomes from paired end high throughput sequencing data
 
-# CRISPR-Repair is a computational pipeline for the analysis of high throughput sequencing data that is generated for studying the double strand DNA break repair mechanism. 
+# Microhomology Detector is a computational pipeline for the analysis of high throughput sequencing data that is generated for studying the double strand DNA break repair mechanism. 
 
 The experimental approach is to create breaks at specific regions of the genome by targeted CRISPR-Cas9 in a specific cell line. After allowing the cells to grow and repair the breaks, specific primers are used to amplify the targeted regions. The PCR amplified products are used for paired end high throughput sequencing library preparation.  In an ideal situation breaks are assumed to be repaired perfectly (without any mutation compared to WT sequence at the ligation junction (double strand break point)). However, in reality this is not true. A significant fraction of the exposed ends (cut site) are chewed by DNA repair enzymes or accessory proteins before ligation and thus create a deletion compared to WT sequence. The length of the deletion varies from clone to clone depending on which repair pathway was used to repair the break. Most often a micro-homology of 2-15 bases has been observed at the ligation junction. The ligation happens in such a way that while one unit of the repeat sequence forms part of the ligation junction, the second repeat unit gets digested before ligation. 
 
@@ -15,13 +15,13 @@ CRISPR-Repair allows a user to quantitate if the break repaired perfectly (PCR a
 5.	Parsing of alignment and identification of deletion and micro homology:  Alignment of each read with expected amplicon sequence is read by custom script. Length of deletion compared to expected sequence, ligation point and 2-15 bases long micro homology at ligation point (if any) is identified. Finally, CRISPR-Repair outputs an alignment of each unique read with the cloning frequency, length of deletion and micro homology information. The complete pipeline is available from at the GitHub repository (https://github.com/pk7zuva/CRISPR-Repair). 
 
 
-# Following are the steps to download and run CRISPR-Repair
+# Following are the steps to download and run Microhomology_Detector
 
 # Clone the repository
 
-git clone https://github.com/pk7zuva/CRISPR-Repair.git
+git clone https://github.com/pk7zuva/Microhomology_Detector.git
 
-cd CRISPR-Repair
+cd Microhomology_Detector
 
 # Install the FLASH package
 
